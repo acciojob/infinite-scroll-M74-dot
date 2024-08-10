@@ -13,11 +13,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 	addItems(10);
 
 	function handleScroll(){
-		const container = document.querySelector('main');
-		const {scrollTop, clientHeight, scrollHeight} = container;
-		if(scrollTop+clientHeight>= scrollHeight-5){
+		const {scrollTop, clientHeight, scrollHeight} = infList;
+		if(scrollTop+clientHeight >= scrollHeight-5){
 			addItems(2);
 		}
 	}
-	document.querySelector('main').addEventListener('scroll', handleScroll);
+	infList.addEventListener('scroll', handleScroll);
 });
